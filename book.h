@@ -1,6 +1,7 @@
 #ifndef BOOK_H
 #define BOOK_H
 #include <string>
+#include "category.h"
 using namespace std;
 
 enum bookStatus{out_of_stock,in_stock};
@@ -16,6 +17,7 @@ class Book{
         string ISBN;
         int pages{1};
         int copies{1};
+        Category book_category;
         bookStatus status{in_stock};
         int book_id;   
 };
