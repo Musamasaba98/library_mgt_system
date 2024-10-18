@@ -10,9 +10,17 @@ class Book{
         Book();
         Book(int id,const string_view& title,int pages,int copies,const string_view& isbn,const Category& category );
         ~Book();
-        void addBook();
-        bool deleteBook();
-    protected:
+        //Methods
+        void displayBookDetails()const;//New method to show details of the book
+        bool isAvailable()const;
+        void borrowBook();
+        void returnBook();
+        //getters
+        string getTitle()const;
+        string getISBN()const;
+        int getPages()const;
+        BookStatus getStatus()const;
+    private:
         string book_title;
         string ISBN;
         int pages{1};

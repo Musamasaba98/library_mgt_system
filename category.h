@@ -1,12 +1,15 @@
 #ifndef CATEGORY_H
 #define CATEGORY_H
 
-enum bookCategory{no_cat,science, sst, english,math};
+
+enum class BookCategory{no_cat,science, sst, english,math};
 class Category{
     public:
-        Category(bookCategory name);
+        Category() = default;
+        Category(const BookCategory& name);
+        string getCategoryName()const;
     protected:
-        bookCategory category_name{no_cat};    
+        BookCategory category_name{BookCategory::no_cat};    
 };
 
 #endif //CATEGORY_H
