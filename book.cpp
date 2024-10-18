@@ -18,24 +18,34 @@ void Book::displayBookDetails()const{
               << "Category: " << book_category.getCategoryName() << "\n"; 
 };
 bool Book::isAvailable()const{
-
+    return status == BookStatus::in_stock;
 };
 void Book::borrowBook(){
-
+     if (copies > 0) {
+        copies--;
+        if (copies == 0) {
+            status = BookStatus::out_of_stock;
+        }
+    } else {
+        std::cout << "This book is out of stock!\n";
+    }
 };
 void Book::returnBook(){
-
+    copies++;
+    if (status == BookStatus::out_of_stock) {
+        status = BookStatus::in_stock;
+    }
 };
 //getters
 string Book::getTitle()const{
-
+    return book_title;
 };
 string Book::getISBN()const{
-
+    return ISBN;
 };
 int Book::getPages()const{
-
+    return pages;
 };
 BookStatus Book::getStatus()const{
-
+    return status;
 };
