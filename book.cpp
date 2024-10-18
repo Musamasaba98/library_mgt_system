@@ -46,6 +46,9 @@ string Book::getISBN()const{
 int Book::getPages()const{
     return pages;
 };
+int Book::getBookID()const{
+    return book_id;
+};
 BookStatus Book::getStatus()const{
     return status;
 };

@@ -20,6 +20,7 @@ class Book{
         string getISBN()const;
         int getPages()const;
         BookStatus getStatus()const;
+        int getBookID()const;
     private:
         string book_title;
         string ISBN;
