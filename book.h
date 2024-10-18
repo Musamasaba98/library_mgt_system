@@ -4,11 +4,11 @@
 #include "category.h"
 using namespace std;
 
-enum bookStatus{out_of_stock,in_stock};
+enum class BookStatus{out_of_stock,in_stock};
 class Book{
     public:
         Book();
-        Book(int id,string_view title,int pages,int copies,string_view isbn);
+        Book(int id,const string_view& title,int pages,int copies,const string_view& isbn,const Category& category );
         ~Book();
         void addBook();
         bool deleteBook();
@@ -18,7 +18,7 @@ class Book{
         int pages{1};
         int copies{1};
         Category book_category;
-        bookStatus status{in_stock};
+        BookStatus status{BookStatus::in_stock};
         int book_id;   
 };
 #endif //BOOK_H
