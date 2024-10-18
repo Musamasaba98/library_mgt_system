@@ -7,7 +7,6 @@ Book::Book(int id,const string_view& title,int pages,int copies,const string_vie
             book_title(title),pages(pages),copies(copies),ISBN(isbn),book_category(category){
                 status=copies>0?BookStatus::in_stock:BookStatus::out_of_stock;
             }
-Book::~Book(){}
 
 void Book::displayBookDetails()const{
       cout << "Title: " << book_title << "\n"

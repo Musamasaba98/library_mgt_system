@@ -4,7 +4,6 @@ using namespace std;
 
 Admin::Admin()=default;
 Admin::Admin(int id,const string_view& name, int age,int emp_id):User(id,name,age),employee_id(emp_id){}
-Admin::~Admin(){}
 
 void Admin::addBook(vector<Book>& library,const Book &newBook){
     library.push_back(newBook);

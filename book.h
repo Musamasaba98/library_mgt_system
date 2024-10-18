@@ -9,7 +9,6 @@ class Book{
     public:
         Book();
         Book(int id,const string_view& title,int pages,int copies,const string_view& isbn,const Category& category );
-        ~Book();
         //Methods
         void displayBookDetails()const;//New method to show details of the book
         bool isAvailable()const;

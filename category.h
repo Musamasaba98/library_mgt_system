@@ -1,6 +1,7 @@
 #ifndef CATEGORY_H
 #define CATEGORY_H
-
+#include <string>
+using namespace std;
 
 enum class BookCategory{no_cat,science, sst, english,math};
 class Category{
