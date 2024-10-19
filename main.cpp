@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "user.h"
 #include "book.h"
 #include "admin.h"
@@ -9,7 +10,8 @@ using namespace std;
 
 
 int main(){
-    Admin admin(1, "John Doe", 35, 12345);
+    string name{"John Doe"};
+    Admin admin(1,name , 35, 12345);
     
     // Create a library as a vector of books
     std::vector<Book> library;

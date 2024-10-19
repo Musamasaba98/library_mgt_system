@@ -6,7 +6,7 @@ using namespace std;
 class User{
     public:
         User();
-        User(int user_id,string_view name,int age);
+        User(int user_id,string name,int age);
        
     protected:
         int user_id{0};

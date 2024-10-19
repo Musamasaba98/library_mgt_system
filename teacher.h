@@ -5,7 +5,7 @@
 
 class Teacher : public User {
 public:
-    Teacher(int id,string_view name,int age );
+    Teacher(int id,string name,int age );
     void borrowBook(Book &book);
 };
 #endif //TEACHER_H

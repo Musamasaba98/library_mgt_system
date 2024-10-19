@@ -3,7 +3,7 @@
 #include "user.h"
 #include <iostream>
 
-Teacher::Teacher( int id,string_view name,int age) : User(id,name,age ) {}
+Teacher::Teacher( int id,string name,int age) : User(id,name,age ) {}
 
 void Teacher::borrowBook(Book &book) {
     if (book.isAvailable()) {

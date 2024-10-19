@@ -5,7 +5,7 @@
 #include <string_view>
 using namespace std;
 
-Student::Student(int id,string_view name, int age) : User(id,name, age) {}
+Student::Student(int id,string name, int age) : User(id,name, age) {}
 
 void Student::borrowBook(Book &book) {
     if (book.isAvailable()) {
